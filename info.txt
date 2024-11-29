@@ -1,0 +1,92 @@
+not use in office
+
+task 1 ==> {
+	store data in database using 4 step form but condition is if user fill 2 step of form then he leave  webside and he come to the website in between 1 year then from srart from ther, where he leave
+
+	what i use ==>i use jQuery session localstorage 
+}
+
+task 2 ==> {
+	export and import excel file to store data into the database
+	refrence site => https://www.itsolutionstuff.com/post/laravel-9-import-export-excel-and-csv-file-tutorialexample.html
+	other => laravel pagination
+}
+
+task 3 ==> {
+	
+	*give me a laravel practical task where i can test myself for practical interview skill as one year of experience.
+
+
+		Here’s a practical Laravel task to help you test your skills for an interview. It includes CRUD operations, relationships, authentication, API development, and frontend integration, which are common requirements for a developer with one year of experience:
+
+		Task: Build a Simple Blog Application
+		Requirements:
+		Authentication System:
+
+		Implement user registration and login using Laravel Breeze or Laravel UI.
+		Allow only authenticated users to access the blog management panel.
+		Models and Relationships:
+
+		Create models for User, Post, and Category.
+		Relationships:
+		A User has many Posts.
+		A Post belongs to one Category.
+		A Category has many Posts.
+		CRUD Operations:
+
+		Implement CRUD for:
+		Categories
+		Posts
+		Include validation for form inputs (e.g., title is required, content must have a minimum length, etc.).
+		API Development:
+
+		Create a REST API for:
+		Fetching all posts with their categories and authors.
+		Creating a post.
+		Updating a post.
+		Deleting a post.
+		Use appropriate HTTP status codes and responses for the API.
+		Search and Filtering:
+
+		Implement a feature to search posts by title.
+		Filter posts by category.
+		Frontend Integration:
+
+		Create a dashboard for managing posts and categories.
+		On the homepage, display a list of posts with their categories and authors.
+		File Upload:
+
+		Allow users to upload an image for each post.
+		Display the uploaded image on the frontend.
+		Pagination:
+
+		Add pagination to the post listing (both API and frontend).
+		Middleware:
+
+		Protect routes to ensure only authenticated users can manage posts and categories.
+		Add middleware to log the IP address and user ID for each request to a log file.
+		Testing:
+
+		Write feature tests for the API to ensure CRUD operations work as expected.
+		Evaluation Criteria:
+		Proper use of Laravel features (e.g., Eloquent, middleware, validation).
+		Code readability and structure (e.g., using repositories or service classes if needed).
+		Efficient handling of database queries and relationships.
+		Clear and user-friendly UI/UX for the frontend.
+		Handling edge cases (e.g., validation errors, unauthorized access).
+		Writing clean and meaningful tests.
+		Would you like a step-by-step guide or additional hints for any part of this task?
+
+
+	*You said:also give a unique name to this project.
+
+		ChatGPT said:
+		ChatGPT
+		You can name this project "Blogify".
+
+		The name reflects the essence of a blogging platform and gives a modern and professional touch. It’s simple, catchy, and easy to remember, which is essential for showcasing your project during interviews.
+}
+
+task 4 ==> {
+	
+}
