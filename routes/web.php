@@ -28,17 +28,3 @@ Route::post('finalSubmit', [RegisterController::class, 'finalSubmit'])->name('fi
 Route::get('edit/{id}', [RegisterController::class, 'edit'])->name('edit');//
 Route::put('update/{id}', [RegisterController::class, 'update'])->name('update');
 Route::get('search', [RegisterController::class, 'search'])->name('search');
-
-Route::controller(ExcelController::class)->group(function(){
-    Route::get('users', 'index');
-    Route::get('users-export', 'export')->name('users.export');
-    Route::post('users-import', 'import')->name('users.import');
-});
-
-// Route::get("create", [PostController::class, "create"]);
-// Route::post('store', [PostController::class, "store"]);//
-// Route::get("index", [PostController::class, "index"]);
-// Route::post('ckeditor/upload', [PostController::class, 'upload'])->name('ckeditor.upload');
-
-
-
