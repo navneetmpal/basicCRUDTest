@@ -1,10 +1,13 @@
 @extends('layout.app')
 @section('content')
     <div class="row m-2">
-        <div class="col-10">
+        <div class="col-2">
+            <a href="{{route('logout')}}" class="btn btn-danger">Logout</a>
+        </div>
+        <div class="col-8">
             <h3><span class="d-block p-1 bg-primary text-white">User listing</span></h3>
         </div>
-        <div class="col-2">
+        <div class="col-2 d-flex justify-content-end">
             <a href="{{route('register')}}" class="btn btn-primary">Create</a>
         </div>
     </div>

@@ -1,10 +1,10 @@
 @extends('layout.app')
 @section('content')
-    <div class="row mt-3" style="margin-left: 204px">
+    <div class="row mt-3 mb-3" style="margin-left: 204px">
         <div class="col-md-8">
             <h4 class="mb-3"><span class="d-block p-2 bg-primary text-white">User registration</span></h4> 
             @include('common.messages')
-            <form id="form" method="post" action="{{ route('finalSubmit') }}" class="shadow-lg p-3 mb-5 bg-body rounded">
+            <form id="form" method="post" action="{{ route('finalSubmit') }}" class="shadow-lg p-3 bg-body rounded">
                 @csrf
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -43,6 +43,9 @@
                 <input type="submit" class="btn btn-danger" value="Submit" />
                 <a href="{{route('index')}}" class="btn btn-primary">Back</a>
             </form>
+            <div class="d-flex justify-content-end pe-2">
+                Allready costumer ? <a href="{{route('login')}}"> Login</a>
+            </div>
         </div>
     </div>
 

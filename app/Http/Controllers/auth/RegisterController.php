@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\Userlang;
 use Illuminate\Validation\Rule;
+use Session;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -65,7 +67,7 @@ class RegisterController extends Controller
     }
 
     public function update(Request $request,$id){
-
+        // echo "<pre>";print_r($request->all());exit();
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
@@ -100,5 +102,33 @@ class RegisterController extends Controller
     public function search(Request $request){
         $data = User::Where('name', 'like', '%' . $request->name . '%')->paginate(10);
         return view('auth.index', compact('data'));
+    }
+
+    public function login(){
+        return view('auth.login');
+    }
+    public function userlogin(Request $request){
+        // echo "<pre>";print_r($request->all());exit();
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+        $remember_me = $request->has('remember_me') ? true : false; 
+
+        if(auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $remember_me))
+        {
+            // $user = auth()->user();
+            // dd($user);
+            return redirect()->route('index');
+        }else{
+            return back()->with('error','your username and password are wrong.');
+        }
+    }
+
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return Redirect('login');
     }
 }
